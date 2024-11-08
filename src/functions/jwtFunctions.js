@@ -32,7 +32,7 @@ async function validateUSerAuth(request, response, next) {
         });
     }
 
-    let decodedData = decodedJWT(providedToken);
+    let decodedData = decodeJWT(providedToken);
     console.log(decodedData);
     if (decodedData.userId){
         next();
